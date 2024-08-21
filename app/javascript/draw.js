@@ -9,7 +9,7 @@ window.customElements.define('draw-signature', class extends HTMLElement {
     this.canvas.height = this.canvas.parentNode.clientHeight * scale
 
     this.canvas.getContext('2d').scale(scale, scale)
-
+    //
     this.pad = new SignaturePad(this.canvas, {
       backgroundColor: 'black',
       penColor: 'white',
