@@ -14,7 +14,10 @@ export default targetable(class extends HTMLElement {
 
     const { default: SignaturePad } = await import('signature_pad')
 
-    this.pad = new SignaturePad(this.canvas)
+    this.pad = new SignaturePad(this.canvas, {
+      backgroundColor: 'black',
+      penColor: 'white',
+    })
 
     this.clear.addEventListener('click', (e) => {
       e.preventDefault()
